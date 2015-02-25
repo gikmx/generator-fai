@@ -7,7 +7,7 @@ Gulp    = require 'gulp'
 
 Gulp.task 'init', ->
 
-	bash = Process.spawn 'bash', ['init.sh'], cwd: __dirname
+	bash = Process.spawn 'bash', ['init.sh', '<%= RepoName %>'], cwd: __dirname
 
 	bash.stdout.on 'data', (data)->
 		process.stdout.write data.toString('utf-8')

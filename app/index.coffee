@@ -22,25 +22,28 @@ module.exports = Yeoman.generators.Base.extend
 		if not @AppName
 			prompts.push
 				type    : 'input'
-				name    : 'appname'
+				name    : 'AppName'
 				message : 'What\'s your app name?'
 				default : @_.slugify @appname
 
 		prompts.push
 			store   : true
 			type    : 'input'
-			name    : 'repo'
+			name    : 'RepoName'
 			message : 'What\'s your fi repo?'
 			default : 'ssh://bitbucket.gikmx/gikmx/fi.git'
 
-		@prompt prompts, (answer)=>
-			@AppName = @_.slugify answer.appname
+		@prompt prompts, (answers)=>
+			for key,val of answers
+				val = @_.slugify val if key is 'AppName'
+				@[key] = val
 			do done
 
 	writing:
 		gulp: ->
 			@template '_gulpfile.js'  , 'gulpfile.js'
 			@directory 'gulp', '.gulp'
+			@template 'gulp/init.sh', '.gulp/init.sh'
 
 		bower: ->
 			@template '_bower.json', 'bower.json', AppName: @AppName

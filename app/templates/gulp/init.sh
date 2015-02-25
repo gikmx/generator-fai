@@ -1,6 +1,6 @@
 test -z `which git` && echo "GIT is missing." 1>&2 && exit 1
 
-deps=(npm coffee-script bower nodemon browser-sync)
+deps=(coffee-script bower nodemon browser-sync)
 for dep in ${deps[@]}; do
 	npm install -g $dep@latest
 done
@@ -14,7 +14,7 @@ path_fi="$path_root/fi"
 echo "Cloning and setting up Fi…"
 cd $path_root
 git init
-git submodule add -b develop --name fi ssh://bitbucket.gikmx/gikmx/fi.git
+git submodule add -b develop --name fi $1 fi
 git submodule update --init
 cd $path_fi
 rm -Rf node_modules
