@@ -5,12 +5,9 @@
   "main": "app.coffee",
   "author": "GiK <gik@gik.mx>",
   "license": "All rights reserved",
-  "devDependencies": {
-    "coffee-script": "^1.9.1",
-    "gulp": "^3.8.7"
-  },
+  "devDependencies": {},
   "scripts": {
-    "install": "gulp init",
+    "install": "FI_SYS=<%=AppSys%> FI_REPO='<%=AppRepo%>' bash .fi/install.sh",
     "sync":"browser-sync start --config=browser-sync.json",
     "watch":"nodemon app.coffee --port=9000"
   }

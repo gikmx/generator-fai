@@ -11,6 +11,7 @@
   "dependencies": {
     "chalk": "^1.0.0",
     "coffee-script": "^1.9.1",
-    "yeoman-generator": "^0.18.9"
+    "yeoman-generator": "^0.18.9",
+    "yosay": "^1.0.2"
   }
 }

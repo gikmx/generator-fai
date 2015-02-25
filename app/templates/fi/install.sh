@@ -1,20 +1,24 @@
 test -z `which git` && echo "GIT is missing." 1>&2 && exit 1
 
-deps=(coffee-script bower nodemon browser-sync)
-for dep in ${deps[@]}; do
-	npm install -g $dep@latest
-done
-
-
 # Set paths
-path=`pwd -P`
-path_root=`cd .. && pwd -P`
+path_root=`pwd -P`
 path_fi="$path_root/fi"
+
+deps=(npm coffee-script bower nodemon gulp browser-sync)
+for dep in ${deps[@]}; do
+	cmd=$dep
+	[ "$dep"  == "coffee-script" ] && cmd='coffee'
+	if $FI_SYS; then
+		npm install -g $dep@latest
+	else
+		test -z `which $cmd` && echo "The module $dep is missing."  1>&2 && exit 1
+	fi
+done
 
 echo "Cloning and setting up Fi…"
 cd $path_root
 git init
-git submodule add -b develop --name fi $1 fi
+git submodule add -b develop --name 'fi' $FI_REPO 'fi'
 git submodule update --init
 cd $path_fi
 rm -Rf node_modules
@@ -38,7 +42,7 @@ echo "  ███        ███  "
 echo "  ███        █▀   "
 echo "                  "
 echo
-echo "remember you can use:"
+echo "Usage:"
 echo
 echo "npm run watch (nodemon)"
 echo "npm run sync  (browser-sync)"
