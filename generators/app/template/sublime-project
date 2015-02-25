@@ -1,0 +1,26 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.sublime-*",
+				".bowerrc",
+				".gitmodules",
+				".sublime-project",
+				"bower.json",
+				"gruntfile.coffee",
+				"package.json",
+				".gitignore",
+				"npm-debug.log"
+			],
+			"folder_exclude_patterns":
+			[
+				"node_modules",
+				"fi"
+			],
+			"follow_symlinks": true,
+			"path": "."
+		}
+	]
+}

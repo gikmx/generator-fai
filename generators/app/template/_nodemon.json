@@ -1,0 +1,11 @@
+{
+	"verbose": true,
+	"ext": "coffee styl jade",
+	"ignore": [
+		"*.css",
+		"app/static"
+	],
+	"execMap": {
+		"coffee": "coffee"
+	}
+}
