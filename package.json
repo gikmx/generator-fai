@@ -1,17 +1,33 @@
 {
   "name": "generator-fi",
-  "version": "0.0.1",
-  "description": "yeoman-generator for fi projects.",
-  "main": "generators/app/index.js",
+  "version": "0.0.2",
+  "description": "A yeoman-generator for fi applications.",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2",
+    "yeoman-generator": "^0.18.9",
+    "coffee-script": "^1.9.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "chalk": "^1.0.0",
-    "coffee-script": "^1.9.1",
-    "yeoman-generator": "^0.18.9",
-    "yosay": "^1.0.2"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gikmx/generator-fi.git"
+  },
+  "keywords": [
+    "yeoman",
+    "generator",
+    "fi",
+    "gik",
+    "gikmx"
+  ],
+  "author": "Héctor Menéndez <etor@gik.mx> (http://gik.mx)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gikmx/generator-fi/issues"
+  },
+  "homepage": "https://github.com/gikmx/generator-fi"
 }
