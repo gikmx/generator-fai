@@ -1,0 +1,17 @@
+{
+  "name": "<%= AppName %>",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.coffee",
+  "author": "GiK <gik@gik.mx>",
+  "license": "All rights reserved",
+  "devDependencies": {
+    "coffee-script": "^1.9.1",
+    "gulp": "^3.8.7"
+  },
+  "scripts": {
+    "install": "gulp init",
+    "sync":"browser-sync start --config=browser-sync.json",
+    "watch":"nodemon app.coffee --port=9000"
+  }
+}

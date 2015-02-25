@@ -1,0 +1,16 @@
+{
+  "name": "<%= AppName %>",
+  "version": "0.0.1",
+  "authors": ["GiK <gik@gik.mx>"],
+  "description": "",
+  "main": "app.coffee",
+  "moduleType": ["node"],
+  "license": "All rights reserved",
+  "homepage": "gik.mx",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {}
+}
