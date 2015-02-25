@@ -16,16 +16,26 @@ module.exports = Yeoman.generators.Base.extend
 		@pkg = require '../package.json'
 
 	prompting: ->
-		return if @AppName and @AppName.length
-		done = @async()
-		@prompt
+		done    = @async()
+		prompts = [];
+
+		if not @AppName
+			prompts.push
+				type    : 'input'
+				name    : 'appname'
+				message : 'What\'s your app name?'
+				default : @_.slugify @appname
+
+		prompts.push
+			store   : true
 			type    : 'input'
-			name    : 'appname'
-			message : 'What\'s your app name?',
-			default : @_.slugify @appname
-			(answer)=>
-				@AppName = @_.slugify answer.appname
-				do done
+			name    : 'repo'
+			message : 'What\'s your fi repo?'
+			default : 'ssh://bitbucket.gikmx/gikmx/fi.git'
+
+		@prompt prompts, (answer)=>
+			@AppName = @_.slugify answer.appname
+			do done
 
 	writing:
 		gulp: ->
