@@ -1,3 +1,0 @@
-require './fi'
-
-ﬁ.listen()

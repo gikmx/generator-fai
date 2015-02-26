@@ -1,0 +1,19 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				".git",
+				".gitignore",
+				"generator-fi.sublime-project",
+				"app/index.js"
+			],
+			"folder_exclude_patterns":
+			[
+				"node_modules"
+			],
+			"path": "./app"
+		}
+	]
+}

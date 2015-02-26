@@ -1,11 +1,14 @@
-{
-	"verbose": true,
-	"ext": "coffee styl jade",
-	"ignore": [
-		"*.css",
-		"app/static"
-	],
-	"execMap": {
-		"coffee": "coffee"
-	}
-}
+  {
+    "verbose": true,
+    "restartable": "rs",
+    "ext":"coffee styl jade",
+    "ignore": [
+    	".git",
+    	"fi",
+    	"node_modules",
+    	"app/static/lib"
+    ],
+    "execMap": {
+      "coffee": "coffee"
+    }
+  }

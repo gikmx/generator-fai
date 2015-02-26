@@ -1,12 +1,12 @@
 {
-  "name": "<%= AppName %>",
+  "name": "<%=AppName%>",
   "version": "0.0.1",
   "authors": ["GiK <gik@gik.mx>"],
   "description": "",
-  "main": "app.coffee",
-  "moduleType": ["node"],
   "license": "All rights reserved",
+  "moduleType": ["globals"],
   "homepage": "gik.mx",
+  "main": "app.coffee",
   "private": true,
   "ignore": [
     "**/.*",

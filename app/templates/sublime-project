@@ -6,18 +6,15 @@
 			[
 				"*.sublime-*",
 				".bowerrc",
-				".gitmodules",
-				".sublime-project",
-				"bower.json",
-				"gruntfile.coffee",
-				"package.json",
-				".gitignore",
-				"npm-debug.log"
+				".git*",
+				"*.json",
+				"*.log"
 			],
 			"folder_exclude_patterns":
 			[
 				"node_modules",
-				"fi"
+				"fi",
+				".fi"
 			],
 			"follow_symlinks": true,
 			"path": "."
