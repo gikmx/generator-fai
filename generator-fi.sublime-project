@@ -6,14 +6,15 @@
 			[
 				".git",
 				".gitignore",
-				"generator-fi.sublime-project",
-				"app/index.js"
+				"*.sublime-*",
+				"index.js",
+				"package.json"
 			],
 			"folder_exclude_patterns":
 			[
 				"node_modules"
 			],
-			"path": "./app"
+			"path": "."
 		}
 	]
 }

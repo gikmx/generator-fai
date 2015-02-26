@@ -8,7 +8,7 @@
   "dependencies":{},
   "devDependencies": {},
   "scripts": {
-    "install": "FI_SYS=<%=AppSys%> FI_REPO='<%=AppRepo%>' bash .fi/install.sh",
+    "install": "FI_SYS=<%=AppSys%> FI_REPO='<%=AppRepo%>' .fi/bin/install",
     "sync":"browser-sync start --config=browser-sync.json",
     "watch":"nodemon app.coffee --port=9000",
     "test"    : "echo \"Error: no test specified\" && exit 1"

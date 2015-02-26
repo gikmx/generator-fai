@@ -47,20 +47,18 @@ module.exports = Yeoman.generators.Base.extend
 			do done
 
 	writing: ->
-			@directory 'fi'               , '.fi'
-			@template 'bowerrc'           , '.bowerrc'
-			@template 'gitignore'         , '.gitignore'
-			@template 'sublime-project'   , "#{@AppName}.sublime-project"
-			@template '_gulpfile.js'      , 'gulpfile.js'
-			@template '_nodemon.json'     , 'nodemon.json'
-			@template '_browser-sync.json', 'browser-sync.json'
-			@template '_bower.json'       , 'bower.json', AppName: @AppName
-			@template '_package.json'     , 'package.json',
-				AppName : @AppName
-				AppRepo : @AppRepo
-				AppSys  : @AppSys
-
-		# app:->
+		@directory 'fi'               , '.fi'
+		@template 'bowerrc'           , '.bowerrc'
+		@template 'gitignore'         , '.gitignore'
+		@template 'sublime-project'   , "#{@AppName}.sublime-project"
+		@template '_gulpfile.js'      , 'gulpfile.js'
+		@template '_nodemon.json'     , 'nodemon.json'
+		@template '_browser-sync.json', 'browser-sync.json'
+		@template '_bower.json'       , 'bower.json', AppName: @AppName
+		@template '_package.json'     , 'package.json',
+			AppName : @AppName
+			AppRepo : @AppRepo
+			AppSys  : @AppSys
 
 	install: ->
 		do @installDependencies
