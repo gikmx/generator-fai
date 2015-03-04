@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+# Set paths
+path_root=`pwd -P`
+path_fi="$path_root/fi"
+
+# Dependency management
+echo "Checking up for dependencies…"
+deps=(npm coffee-script bower nodemon gulp browser-sync)
+for dep in ${deps[@]}; do
+	cmd=$dep
+	[ "$dep"  == "coffee-script" ] && cmd='coffee'
+	if $FI_SYS; then
+		npm install -g $dep@latest
+	else
+		test -z `which $cmd` && echo "The module $dep is missing."  1>&2 && exit 1
+	fi
+done

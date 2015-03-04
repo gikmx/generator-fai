@@ -1,0 +1,32 @@
+doctype html
+<!--[if lt IE 10]><html class="fallback" lang="es"><![endif]-->
+<!--[if !IE]><!-->
+html(lang="es",class=rootClasses)
+	<!--<![endif]-->
+	head
+		meta(charset=ﬁ.conf.charset)
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		block ﬁ.meta
+
+		title Fi's Boilerplate.
+
+		link(rel='shortcut icon', href='/static/images/favicon.ico')
+		block ﬁ.link
+
+	body
+		#fallback
+			include fallback/view
+
+		header#header
+			include header/view
+
+		main#main
+			block ﬁ.content
+
+		footer#footer
+			include footer/view
+
+		block ﬁ.script
+
+		if ﬁ.conf.live
+			script(src='/static/scripts/google-analytics.js')

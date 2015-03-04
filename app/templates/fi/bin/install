@@ -1,41 +1,5 @@
 #!/bin/bash
 
-test -z `which git` && echo "GIT is missing." 1>&2 && exit 1
-
-# Set paths
-path_root=`pwd -P`
-path_fi="$path_root/fi"
-
-# Dependency management
-echo "Checking up for dependencies…"
-deps=(npm coffee-script bower nodemon gulp browser-sync)
-for dep in ${deps[@]}; do
-	cmd=$dep
-	[ "$dep"  == "coffee-script" ] && cmd='coffee'
-	if $FI_SYS; then
-		npm install -g $dep@latest
-	else
-		test -z `which $cmd` && echo "The module $dep is missing."  1>&2 && exit 1
-	fi
-done
-
-# Updating
-echo "Cloning and setting up Fi…"
-cd $path_root
-git init
-git submodule add -b develop --name 'fi' $FI_REPO 'fi'
-
-cd $path_fi
-rm -Rf node_modules
-npm install --production
-
-echo "Compiling and testing Fi…"
-cd $path_root
-coffee -e 'require "./fi"' 1> /dev/null 2>&1
-if [ ! -f  "app.coffee" ]; then
-	printf "require './fi'\n\nﬁ.listen()\n" > app.coffee
-fi
-
 echo
 echo "   ▄████████  ▄█  "
 echo "  ███    ███ ███  "

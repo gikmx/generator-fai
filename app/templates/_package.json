@@ -1,16 +1,18 @@
 {
   "name": "<%=AppName%>",
   "version": "0.0.1",
-  "description": "",
+  "description": "A Fi powered application.",
   "main": "app.coffee",
   "author": "GiK <gik@gik.mx>",
   "license": "All rights reserved",
-  "dependencies":{},
+  "dependencies":{
+    "fi-core": "*"
+  },
   "devDependencies": {},
   "scripts": {
-    "install": "FI_SYS=<%=AppSys%> FI_REPO='<%=AppRepo%>' .fi/bin/install",
+    "install": ".fi/bin/install",
     "sync":"browser-sync start --config=browser-sync.json",
-    "watch":"nodemon app.coffee --port=9000",
+    "watch":"nodemon app.coffee",
     "test"    : "echo \"Error: no test specified\" && exit 1"
   }
 }

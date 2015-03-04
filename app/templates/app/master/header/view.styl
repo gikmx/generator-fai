@@ -1,0 +1,31 @@
+&
+
+	// Jeet (https://github.com/mojotech/jeet/tree/master/stylus)
+	edit()
+	center(100%, 1rem)
+
+	background-color : $color-3rd
+	padding          : 0.5rem
+
+	& > *
+		column(4/12) // Jeet
+		color: $color-white-darker
+
+h1
+	{$font-2nd-bold}
+
+nav ul
+	center(100%, 0)
+	list-style: none
+
+	li
+		column(6/12)
+	a
+		color       : $color-white
+		hover-color : $color-1st-brighter // Axis
+
+button
+	center()
+	// Axis (http://axis.bitballoon.com)
+	button    : $color-1st 'large'
+	hover-pop : 1.5 90deg true

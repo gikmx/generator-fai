@@ -1,0 +1,45 @@
+$tone = {
+	'white' : #F0F0F0,
+	'black' : #101010,
+	'1st'   : #EB5857, // coral
+	'2nd'   : #59C6D4, // jade
+	'3rd'   : #4D4E4E  // smoke
+}
+
+/*
+ * Generates variables and blocks corresponding to the tones
+ * specified above with different shades and transparencies.
+ *
+ * for example, if you specify a color 'foo', it would generate
+ * $color-foo               variable containing 'foo' with it's original tone
+ * $color-foo-bright		variable containing 'foo' with 25% more brightness
+ * $color-foo-brighter		variable containing 'foo' with 50% more brightness
+ * $color-foo-brightest		variable containing 'foo' with 75% more brightness
+ * $color-foo-dark			variable containing 'foo' with 25% more darkness
+ * $color-foo-darker		variable containing 'foo' with 50% more darkness
+ * $color-foo-darkest		variable containing 'foo' with 75% more darkness
+ * $color-foo-faint			variable containing 'foo' with 25% more opacity
+ * $color-foo-fainter		variable containing 'foo' with 50% more opacity
+ * $color-foo-faintest		variable containing 'foo' with 75% more opacity
+ */
+
+$fn-color()
+	step   = 25%
+	result = {}
+	shades = 'normal' 'bright' 'dark' 'faint'
+	steps  = { '':1, 'er':2, 'est':3 }
+
+	for tone-k,tone-v in $tone
+		for shade in shades
+			if shade == 'normal'
+				result[tone-k] = tone-v
+			else
+				for step-k,step-v in steps
+					tone = lighten(tone-v, step * step-v) if shade == 'bright'
+					tone = darken(tone-v, step * step-v) if shade == 'dark'
+					tone = transparentify(tone-v, step * step-v) if shade == 'faint'
+					result[tone-k + '-' + shade + step-k] = tone
+	result
+
+for color-key, color-val in $fn-color()
+	define('$color-' + color-key, color-val)
