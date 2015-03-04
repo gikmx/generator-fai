@@ -1,0 +1,18 @@
+@require 'common'
+
+// Nib's normalize
+normalize-css()
+
+body > header
+	@require 'header/view'
+
+body > footer
+	@require 'footer/view'
+
+body > main
+	background-color : $color-white
+	overflow         : hidden
+	padding          : 0 1rem
+
+#fallback
+	@require 'fallback/view'

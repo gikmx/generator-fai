@@ -1,0 +1,23 @@
+// Enable colors for developer mode.
+html.dev-mode body
+	&:before
+		z-index     : -1
+		content     : 'mini'
+		position    : fixed
+		display     : block
+		margin      : 0 auto
+		font-size   : 10em
+		font-weight : 700
+		width       : 100%
+		height      : 1em
+		line-height : 1em
+		text-align  : center
+		bottom      : 0
+
+	for name, i in rupture.scale-names
+		+at(name)
+			background-color: $devmode-colors[i]
+			&:before
+				content          : name
+				color            : $devmode-colors[i]
+				background-color : darken(transparentify($devmode-colors[i],0.1), 50%)
