@@ -1,12 +1,12 @@
 {
   "name": "<%=AppName%>",
   "version": "0.0.1",
-  "description": "A Fi powered application.",
+  "description": "A Fai powered app.",
   "main": "app.coffee",
   "author": "GiK <gik@gik.mx>",
   "license": "All rights reserved",
   "dependencies":{
-    "fi-core": "*"
+    "fai": "*"
   },
   "devDependencies": {},
   "scripts": {

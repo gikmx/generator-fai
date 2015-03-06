@@ -1,4 +1,4 @@
-# Yeoman Generator for Fi Apps.
+# Yeoman Generator for Fai Apps.
 
 Generador Yeoman para la automatización de despliegue de una aplicación **[fi-core](https://github.com/gikmx/fi-core)**
 

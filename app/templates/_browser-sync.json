@@ -5,7 +5,7 @@
             "port": 8080
         }
     },
-    "files": ["fi/fi.lastrun"],
+    "files": ["node_modules/fai/lib/core/fi.lastrun"],
     "proxy": "localhost:9000",
     "port": 3000,
     "server": false,

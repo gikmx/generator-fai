@@ -13,7 +13,6 @@
 			"folder_exclude_patterns":
 			[
 				"node_modules",
-				"fi",
 				".fi"
 			],
 			"follow_symlinks": true,

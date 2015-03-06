@@ -1,7 +1,7 @@
 {
-  "name": "generator-fi",
-  "version": "0.1.1",
-  "description": "A yeoman-generator for fi applications.",
+  "name": "generator-fai",
+  "version": "0.1.0",
+  "description": "A yeoman-generator for fai apps.",
   "main": "index.js",
   "dependencies": {
     "chalk": "^1.0.0",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gikmx/generator-fi.git"
+    "url": "https://github.com/gikmx/fai.generator.git"
   },
   "keywords": [
     "yeoman",
@@ -27,7 +27,7 @@
   "author": "Héctor Menéndez <etor@gik.mx> (http://gik.mx)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gikmx/generator-fi/issues"
+    "url": "https://github.com/gikmx/fai-generator/issues"
   },
-  "homepage": "https://github.com/gikmx/generator-fi"
+  "homepage": "https://github.com/gikmx/fai-generator"
 }

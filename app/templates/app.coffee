@@ -1,3 +1,3 @@
-require 'fi-core'
+require 'fai'
 
 do ﬁ.listen
