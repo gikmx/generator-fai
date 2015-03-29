@@ -1,25 +1,33 @@
 # Yeoman Generator for Fai Apps.
 
-Generador Yeoman para la automatización de despliegue de una aplicación **[fi-core](https://github.com/gikmx/fi-core)**
+Yeoman-generator to automate the creation of a **[fai](https://github.com/gikmx/fai.git)** application.
 
-## Instalación
 
-	# Instalar yeoman y generator-fi globalmente
-	npm install -g yo generator-fi
+## Installation
 
-	# Crear la carpeta en donde deseas resida tu proyecto
-	mkdir FiApp && cd $_
+	npm install -g yo generator-fai
 
-	# Recuéstate y deja que yeoman haga la magia por ti.
+
+## Usage
+
+Create your project folder
+
+	mkdir project && cd $_
+
+Initialize the project
+
 	yo fi
 
-	# Una vez finalizado, simplemente ejecuta nodemon
+When in development you can watch for changes
+
 	npm run watch
 
-	# Y si deseas evitar recargar tu navegador, en otra ventana de terminal puedes
-	# ejecutar browser-sync
+In another terminal window, you can optionally run browser-sync for your convenience
+
 	npm run sync
 
-## Documentación
+## Bundle creation
 
-Pendiente por generar
+You can create an example bundle using this simple command.
+
+	yo fi:bundle bundlename
